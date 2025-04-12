@@ -34,6 +34,8 @@ int main () {
 
     show_values(agenda, size);
 
+    free(agenda);
+
     return 0;
 }
 
