@@ -46,3 +46,36 @@ Lista *buscar(Lista *l, int v)
     }
     return NULL;
 }
+
+Lista *remover_lista(Lista *l, int v)
+{
+    Lista *p = l;
+    Lista *ant = NULL;
+
+    if (p == NULL)
+    {
+        return l;
+    }
+
+    while (p != NULL && p->info != v)
+    {
+        printf("p->info: %d\n", p->info);
+        ant = p;
+        printf("ant->info: %d\n", ant->info);
+
+        p = p->prox;
+        printf("p->info depois: %d\n", p->info);
+    }
+
+    if (ant == NULL)
+    {
+        l = p->prox;
+    }
+    else
+    {
+        ant->prox = p->prox;
+    }
+
+    free(p);
+    return l;
+}

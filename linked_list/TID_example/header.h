@@ -12,5 +12,6 @@ Lista *inserir_lista(Lista *l, int i);
 void imprimir_lista(Lista *l);
 int vazia(Lista *l);
 Lista *buscar(Lista *l, int v);
+Lista *remover_lista(Lista *p, int v);
 
 #endif // HEADER_H
